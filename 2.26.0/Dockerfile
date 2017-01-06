@@ -14,9 +14,9 @@ LABEL tags="Genomics"
 # Maintainer
 MAINTAINER Andrew Wong <nderoo.wong@gmail.com>
 
-RUN conda install bedtools=2.26.0
+USER root
 
-WORKDIR /data/
+RUN conda install bedtools=2.26.0
 
 CMD ["bedtools"]
 
